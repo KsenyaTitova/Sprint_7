@@ -5,6 +5,7 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CourierTest {
@@ -109,6 +110,7 @@ public class CourierTest {
     }
 
     @Test
+    @Ignore
     @DisplayName("Проверка авторизации курьера без пароля")
     public void checkLoginCourierWithoutPasswordReturnCodeStatus400() {
         CourierRequest newCourier = generator.generic();
